@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RougeCMMS</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 2rem;
+  }
+  .card {
+    background: rgba(30,41,59,0.8);
+    border: 1px solid rgba(148,163,184,0.15);
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    max-width: 600px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+  }
+  h1 { font-size: 2.5rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+  .sub { color: #94a3b8; font-size: 1.1rem; margin-bottom: 2rem; }
+  p { color: #cbd5e1; line-height: 1.7; margin-bottom: 1.5rem; }
+  .features {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    text-align: left; margin: 2rem 0;
+  }
+  .features li {
+    list-style: none; padding: 0.6rem 1rem;
+    background: rgba(148,163,184,0.06); border-radius: 8px;
+    font-size: 0.95rem;
+  }
+  .features li::before { content: "▸ "; color: #38bdf8; }
+  .btn {
+    display: inline-block; background: #2563eb; color: #fff;
+    padding: 0.85rem 2rem; border-radius: 10px; text-decoration: none;
+    font-weight: 600; font-size: 1rem; margin: 0.5rem;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: #1d4ed8; }
+  .btn-outline {
+    background: transparent; border: 1px solid #475569; color: #cbd5e1;
+  }
+  .btn-outline:hover { background: rgba(148,163,184,0.1); }
+  footer { margin-top: 3rem; color: #64748b; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>🔧 RougeCMMS</h1>
+  <div class="sub">Computerized Maintenance Management — offline-first, portable, free.</div>
+
+  <p>
+    Manage assets, work orders, PM schedules, inventory, BOMs, vendors,
+    and purchase orders — all in a single desktop app. Git-backed version
+    control, kanban boards, and a background service for scheduled reports.
+  </p>
+
+  <ul class="features">
+    <li>📋 Work Orders &amp; Kanban</li>
+    <li>🔁 PM Schedules with Kit Libraries</li>
+    <li>📦 Inventory &amp; Reorder Tracking</li>
+    <li>🏗️ Asset BOM (bill of materials)</li>
+    <li>🚚 Vendors, POs &amp; Receiving</li>
+    <li>📊 Scheduled Reports &amp; CSV Import</li>
+    <li>🔍 Global Search &amp; Command Palette</li>
+    <li>🔐 Role-based Access (Admin / Tech)</li>
+    <li>📝 External Maintenance Reports API</li>
+    <li>💾 Git-backed DB version control</li>
+    <li>🖥️ Portable mode (USB / removable drives)</li>
+    <li>🔔 Notification Center with Rules</li>
+  </ul>
+
+  <div>
+    <a href="https://github.com/twinvalley/RougeCMMS/releases" class="btn">Download</a>
+    <a href="https://github.com/twinvalley/RougeCMMS" class="btn btn-outline">Source (Private)</a>
+  </div>
+
+  <footer>
+    Built with <a href="https://wails.io" style="color:#64748b">Wails</a> + Go + SQLite &nbsp;·&nbsp;
+    Paper Plane Mode &copy; 2026
+  </footer>
+</div>
+
+</body>
+</html>
